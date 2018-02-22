@@ -1,0 +1,20 @@
+<html>
+<head>
+   <style>
+      img {
+         width: 400px;
+      }
+   </style>
+</head>
+<body>
+   <img src='/image' />
+   <script>
+      (function() {
+         var image = document.querySelector('img');
+         setInterval(function() {
+            image.src = '/image?' + new Date().getTime();
+         }, 100)
+      })();
+   </script>
+</body>
+</html>
